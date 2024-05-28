@@ -4,12 +4,12 @@ local maxTransparencyDistance = 50 -- Maximum transparency distance (e.g., 50 un
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
+        Wait(350)
         local playerPed = PlayerPedId()
         local playerCoords = GetEntityCoords(playerPed)
         local playerForwardVector = GetEntityForwardVector(playerPed)
-
         local npcs = GetGamePool('CPed')
+
         for _, npc in ipairs(npcs) do
             if npc ~= playerPed then
                 local npcCoords = GetEntityCoords(npc)
